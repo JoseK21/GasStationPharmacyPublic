@@ -9,3 +9,6 @@ div.degradado{
   padding-top: 50px;
   padding-bottom: 30px;
 }
+.jumbotron {
+  background-size: cover;
+}

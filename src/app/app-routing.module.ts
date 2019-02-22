@@ -10,6 +10,7 @@ import { CCrearComponent } from './cliente/c-crear/c-crear.component';
 import { CActualizarComponent } from './cliente/c-actualizar/c-actualizar.component';
 import { CEliminarComponent } from './cliente/c-eliminar/c-eliminar.component';
 import {GestionComponent} from './gestion/gestion.component';
+import {SignInComponent} from './sign-in/sign-in.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
 
   // Inicio
   { path: 'inicio', component: InicioComponent },
-
+// Sign-In
+  { path: 'sign-in', component: SignInComponent },
   // PageNotFound
   { path: 'pageNotFound', component: PageFoundComponent },
   // Rol
