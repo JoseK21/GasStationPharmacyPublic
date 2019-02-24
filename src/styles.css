@@ -2,10 +2,13 @@
 
 nav{
   background: -moz-linear-gradient(Green,Black);
+  background: -webkit-linear-gradient(Green,Black);
 }
 
 div.degradado{
   background: -moz-linear-gradient(Green,Black);
+  background: -webkit-linear-gradient(Green,Black);
+
   padding-top: 50px;
   padding-bottom: 30px;
 }
