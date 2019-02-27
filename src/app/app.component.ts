@@ -27,7 +27,44 @@ export class AppComponent {
       });
   }
 
+  createTask() {
+    const task = {
+      id: 21,
+      numCedula: 'string',
+      nombre: 'string',
+      apellido: 'string',
+      lugResidencia: 'string',
+      fecNacimiento: 'string',
+      tel: 'string',
+      historia: 'string',
+    };
+    this.taskService.createTask(task).subscribe((newTask) => {console.log(newTask);
+    });
+  }
 
+  updateTask() {
+    const task = {
+      id: 21,
+      numCedula: '301150921',
+      nombre: 'Maria',
+      apellido: 'Lopez',
+      lugResidencia: 'Colombia',
+      fecNacimiento: '12-04-1991',
+      tel: 'null',
+      historia: 'Es una mujer desconocida',
+    };
+    this.taskService.updateTask(task)
+      .subscribe(todo => {
+        console.log(todo);
+      });
+  }
+
+  deleteTask() {
+    this.taskService.deleteTask('1')
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
 }
 
 /* Para usar la lista de tareas se injecta el
