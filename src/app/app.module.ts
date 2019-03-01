@@ -41,7 +41,7 @@ import { GestionComponent } from './gestion/gestion.component';
     PActualizarComponent,
     PCrearComponent,
     PEliminarComponent,
-    GestionComponent
+    GestionComponent,
   ],
   imports: [
     BrowserModule,
