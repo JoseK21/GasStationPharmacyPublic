@@ -4,54 +4,57 @@
 <form>
     <div class="form-group">
       <label>Numero de Cédula</label>
-      <input type="text" class="form-control" id="cc-numeroCedula" placeholder="301110555">
+      <input #NC type="text" class="form-control" id="cc-numeroCedula" placeholder="301110555">
     </div>
 
     <div class="form-group">
       <label>Nombre</label>
-      <input type="text" class="form-control" id="cc-nombre" placeholder="">
+      <input #N type="text" class="form-control" id="cc-nombre" placeholder="">
     </div>
 
     <div class="form-group">
       <label>Apellido</label>
-      <input type="text" class="form-control" id="cc-apellido" placeholder="">
+      <input #A type="text" class="form-control" id="cc-apellido" placeholder="">
     </div>
 
     <div class="form-group">
       <label>Lugar de Residencia</label>
-      <input type="text" class="form-control" id="cc-lugarResidencia" placeholder="">
+      <input #LR type="text" class="form-control" id="cc-lugarResidencia" placeholder="">
     </div>
 
     <div class="form-group">
       <label>Fecha de nacimiento</label>
-      <input type="date" class="form-control" id="cc-fechaNacimiento" placeholder="">
+      <input #FN type="date" class="form-control" id="cc-fechaNacimiento" placeholder="">
     </div>
 
     <div class="form-group">
       <label>Telefono</label>
-      <input type="text" class="form-control" id="cc-telefono" placeholder="########">
+      <input #T type="text" class="form-control" id="cc-telefono" placeholder="########">
     </div>
 
 
     <div class="form-group">
       <label>Breve historial de los padecimientos</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <textarea #BH class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
 
   <div class="form-group">
     <label>Contraseña</label>
-    <input #signIn_contrasena type="password" class="form-control" >
+    <input #C type="password" class="form-control" >
   </div>
 
   <div class="form-group">
     <label >Confirme Contraseña</label>
-    <input #signIn_contrasenaC type="password" class="form-control">
+    <input #CC type="password" class="form-control">
   </div>
 
 
-  <button type="button" class="btn btn-success btn-block" >Log In</button>
+  <button type="button" class="btn btn-success btn-block"
+          button (click)="createCliente(NC.value,N.value,A.value,LR.value,FN.value,T.value,BH.value)">Create</button>
+  <br>
+
+  <button type="button" class="btn btn-success btn-block"
+          button (click)="deleteCliente(T.value)">Delete</button>
   <br>
 </form>
-
-
 </div>
